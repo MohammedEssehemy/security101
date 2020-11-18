@@ -23,7 +23,7 @@ const CustomHeader = () => {
                 }
             }
     `);
-    const { title, repo, linkedIn, github, stackOverflow, email } = siteMetadata;
+    const { title, repo, linkedIn, stackOverflow, email } = siteMetadata;
     return (
         <>
             <GithubCorner bannerColor="#FFFFFF" octoColor="#000000" href={repo} rel="noopener noreferrer" target="_blank" />
@@ -38,11 +38,6 @@ const CustomHeader = () => {
                     <div>
                         < a href={stackOverflow} target="_blank" rel="noopener noreferrer" >
                             <FontAwesomeIcon icon={faStackOverflow} size="lg" title="StackOverflow" color="#FFFFFF" />
-                        </a>
-                    </div>
-                    <div>
-                        <a href={github} target="_blank" rel="noopener noreferrer" >
-                            <FontAwesomeIcon icon={faGithub} size="lg" title="GitHub" color="#FFFFFF" />
                         </a>
                     </div>
                     <div>
