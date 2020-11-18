@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     author: `Mohammed Essehemy`,
     title: `Security 101 - Essehemy`,
-    repo: `https://github.com/MohammedEssehemy/security-101`,
+    repo: `https://github.com/MohammedEssehemy/security101`,
     github: `https://github.com/mohammedessehemy`,
     linkedIn: `https://linkedin.com/in/mohammed-essehemy`,
     stackOverflow: 'https://stackoverflow.com/users/7435863/mohammed-essehemy',

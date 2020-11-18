@@ -68,9 +68,8 @@ How are we doing regarding security?🥴
 
 <ReactImageMagnify  
 smallImage={{
-    alt: 'Node.js security infographics',
-    isFluidWidth: false,
     src: securityImage,
+    alt: 'Node.js security infographics',
     width: 300,
     height: 700
 }} 
@@ -316,9 +315,14 @@ import XXEImage from '../images/XML_External_Entities.png';
     <CustomHeader />
 </Header>
 
----
+<center>
+Many older or poorly configured XML processors evaluate external entity references within XML documents. 
+External entities can be used to disclose internal files using the file URI handler, internal file shares, internal port scanning, remote code execution, and denial of service attacks
+</center>
 
-
+<center>
+use less complex data formats such as JSON, and avoiding serialization of sensitive data
+</center>
 
 ---
 
@@ -458,3 +462,6 @@ continue
 - [OWASP Top 10 - 2017 Infographic](https://www.veracode.com/sites/default/files/owasp-top-10-update-2017-infographic.png)
 - [NodeJS security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
 - [CWE Top 25](https://cwe.mitre.org/data/definitions/1350.html)
+- [I’m harvesting credit card numbers and passwords from your site. Here’s how](https://medium.com/hackernoon/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5)
+- [Part 2: How to stop me harvesting credit card numbers and passwords from your site](https://medium.com/hackernoon/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9)
+- [A post-mortem of the malicious event-stream backdoor](https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/)

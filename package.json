@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "security-101-presentation",
+  "name": "security101-presentation",
   "version": "4.1.0",
   "main": "index.js",
   "license": "MIT",
@@ -23,6 +23,6 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-github-corner": "^2.5.0",
-    "react-image-magnify": "^2.7.4"
+    "react-image-magnify": "git+https://github.com/MohammedEssehemy/react-image-magnify.git"
   }
 }
