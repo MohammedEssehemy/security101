@@ -32,6 +32,10 @@ export default {
         Slide: {
             fontFamily: 'body',
             fontSize: [3, 4, 5, 6],
+            paddingRight: '2rem',
+            paddingLeft: '2rem',
+            paddingTop: '1rem',
+            paddingBottom: '1rem',
         },
         h1: {
             variant: 'text.heading',
