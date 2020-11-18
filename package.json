@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@mdx-deck/gatsby-example",
+  "name": "security-101-presentation",
   "version": "4.1.0",
   "main": "index.js",
   "license": "MIT",
