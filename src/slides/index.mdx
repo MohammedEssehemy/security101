@@ -35,7 +35,7 @@ export const theme = customTheme
     <CustomHeader />
 </Header>
 
-#### Everything relies on computers
+##### Everything relies on computers
 
 - Communication 
 - Medicine 
@@ -205,7 +205,8 @@ import injectionImage from "../images/injection.jpg";
     <CustomHeader />
 </Header>
 
-- The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization 
+- The attacker’s hostile data can trick the interpreter into executing unintended commands 
+or accessing data without proper authorization 
 - User-supplied data is not validated, filtered, or sanitized by the application 
 - Most common types are `SQL`, `NoSQL`
 
@@ -258,7 +259,6 @@ import brokenAuthenticationImage from "../images/Broken_Authentication.png";
 
 - Implement multi-factor authentication to prevent credential stuffing and brute force attacks
 - Change default credentials, particularly for admin users 
-- Implement weak-password checks 
 - Ensure rate limit and apply exponential backoff
 - User sessions or authentication tokens should be invalidated during logout or a period of inactivity
 
@@ -282,7 +282,6 @@ import sensitiveDataExposureImage from '../images/SensitiveDataExposure.jpg';
 </Header>
 
 - Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. 
-- Personal Identifiable information (PII) data such as health records, creden- tials, personal data, and credit cards
 - Data transmitted in clear text? protocols such as HTTP, SMTP, and FTP (in transit)
 - Is sensitive data stored in clear text, including backups? (at rest)
 - are any user agent (browser) security directives or headers missing?
@@ -295,10 +294,8 @@ import sensitiveDataExposureImage from '../images/SensitiveDataExposure.jpg';
 
 ## Mitigation 💉
 
-- Classify data processed, stored, or transmitted by an application. 
-- Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs
+- Identify which data is sensitive according to laws, or business needs
 - Don’t store sensitive data unnecessarily
-- Ensure up-to-date and strong standard algorithms and key management
 - Encrypt all data in transit with secure protocols such as TLS
 - Use [HSTS - HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 - Disable caching for responses that contain sensitive data
@@ -350,9 +347,9 @@ import accessControlImage from '../images/Access_Control.png';
 ### Symptoms
 
 - Restrictions on what authenticated users are allowed to do are often not properly enforced. (Authorization) 
-- Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users' accounts, view sensitive files, modify other users’ data, change access rights, etc
-- Elevation of privilege. Acting as a user without being logged in, or acting as an admin when logged in as a user
-- Access control is only effective if enforced in trusted server-side code or server-less API, where the attacker cannot modify the access control check or metadata
+- Attackers can exploit it to access unauthorized functionality and/or data
+- Elevation of privilege, acting as an admin when logged in as a normal user
+- It is only effective if enforced in trusted server-side code, where the attacker cannot modify it
 
 ---
 
@@ -402,7 +399,6 @@ import misconfigurationsImage from '../images/Misconfigurations.png';
 - Security misconfiguration is the most commonly seen issue
 - This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured CORS and HTTP headers, and verbose error messages containing sensitive information
 - Missing appropriate security hardening across any part of the application stack
-- A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down
 
 ---
 
@@ -424,9 +420,9 @@ import xssImage from '../images/xss.jpg';
     <CustomHeader />
 </Header>
 
-- XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping
-- XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions or redirect the user to malicious sites
-- XSS attacks include session stealing, account takeover, MFA bypass, malicious software downloads, key logging, ...
+- Occurs whenever an application includes untrusted data in a new web page without proper validation or escaping
+- Allows attackers to execute scripts in the victim’s browser which can hijack user sessions or visit malicious sites
+- Include session stealing, account takeover, MFA bypass, malicious software downloads, key logging, ...
 
 ---
 
@@ -436,7 +432,7 @@ import xssImage from '../images/xss.jpg';
 
 ### XSS types
 
-- DOM XSS (Type 0): The entire tainted data flow from source to sink takes place in the browser. For example, the source could be the URL of the page and the sink is a method call that causes the execution of malicious data (e.g., document.write).
+- DOM XSS (Type 0): The entire tainted data flow from source to sink takes place in the browser.
 - Stored XSS (Type I): The application or API stores unsanitized user input that is viewed at a later time by another user
 - Reflected XSS (Type II): user input is immediately returned by a web application in an error message, search result, or any other response without sanitization.
 
@@ -510,11 +506,10 @@ import componentsWithKnownVulnsImage from '../images/comp_known_vulns.png';
     <CustomHeader />
 </Header>
 
-- Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application
 - Only obtain components from official sources over secure links
 - Upgrade periodically and perform automated sanity checks
 - Remove unused dependencies, unnecessary features, components, files, and documentation
-- Monitor for libraries and components that are unmaintained or do not create security patches for older versions
+- Monitor for libraries and components that are unmaintained
 
 ---
 
@@ -583,7 +578,7 @@ smallImage={{
     src: allInOneImage,
     alt: 'OWASP Top 10 all in one',
     width: 300,
-    height: 775
+    height: 625
     }} 
 largeImage={{
     src: allInOneImage,
@@ -629,7 +624,7 @@ import unvalidatedRedirectImage from '../images/unvalidated_redirects.jpeg';
     <CustomHeader />
 </Header>
 
-### A10: 2013 – Unvalidated Redirects and Forwards
+#### A10: 2013 – Unvalidated Redirects and Forwards
 
 
 <img src={unvalidatedRedirectImage} />
@@ -686,14 +681,17 @@ this discipline was probably ill-explained to you
 - [OWASP Top 10 - 2017 Infographic](https://www.veracode.com/sites/default/files/owasp-top-10-update-2017-infographic.png)
 - [NodeJS security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
 - [CWE Top 25](https://cwe.mitre.org/data/definitions/1350.html)
-- [I’m harvesting credit card numbers and passwords from your site. Here’s how](https://medium.com/hackernoon/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5)
-- [Part 2: How to stop me harvesting credit card numbers and passwords from your site](https://medium.com/hackernoon/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9)
+- I’m harvesting credit card numbers and passwords from your site. Here’s how ([part 1](https://medium.com/hackernoon/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5), [Part 2](https://medium.com/hackernoon/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9))
 - [A post-mortem of the malicious event-stream backdoor](https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/)
 - [CSRF](https://owasp.org/www-community/attacks/csrf)
 - [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
 
 ---
+
+<Header>
+    <CustomHeader />
+</Header>
 
 ## Thank you 
 ### 👋👋

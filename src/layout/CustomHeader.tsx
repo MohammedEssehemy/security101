@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import GithubCorner from 'react-github-corner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import './global.css'
 

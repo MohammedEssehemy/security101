@@ -1,3 +1,5 @@
+import ExternalLink from './ExternalLink';
+
 export default {
     colors: {
         text: '#fff',
@@ -32,10 +34,7 @@ export default {
         Slide: {
             fontFamily: 'body',
             fontSize: [3, 4, 5, 6],
-            paddingRight: '2rem',
-            paddingLeft: '2rem',
-            paddingTop: '1rem',
-            paddingBottom: '1rem',
+            padding: '5%',
         },
         h1: {
             variant: 'text.heading',
@@ -60,11 +59,11 @@ export default {
         },
         ul: {
             m: 0,
+            maxHeight: '80%'
         },
         li: {
-            m: 3,
-            fontSize: '2.2rem',
-            marginBottom: '2rem'
+            m: 20,
+            fontSize: '1.6rem',
         },
         ol: {
             m: 0,
@@ -109,4 +108,7 @@ export default {
             fontWeight: 'bold',
         },
     },
+    components: {
+        a: ExternalLink
+    }
 }
