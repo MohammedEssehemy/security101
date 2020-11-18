@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "security101-presentation",
+  "description": null,
+  "icons": {
+    "60": "/icons-a7e646196b7231a46978fa2311c982b1/firefox_app_60x60.png",
+    "128": "/icons-a7e646196b7231a46978fa2311c982b1/firefox_app_128x128.png",
+    "512": "/icons-a7e646196b7231a46978fa2311c982b1/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
