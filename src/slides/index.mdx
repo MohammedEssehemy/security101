@@ -337,7 +337,7 @@ import accessControlImage from '../images/Access_Control.png';
     <CustomHeader />
 </Header>
 
-## A5:2017-Broken Access Control
+## A5:2017 - Broken Access Control
 
 <img src={accessControlImage} />
 
@@ -374,7 +374,7 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
 
 ### Mitigation
 
-- Deny by default
+- Deny by default - Leasr tequired privilege
 - Enforce record ownership, rather than accepting that the user can create, read, update, or delete any record
 - Log access control failures, alert admins when appropriate (e.g. repeated failures)
 - JWT tokens should be invalidated on the server after logout
@@ -382,9 +382,16 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
 
 ---
 
+import misconfigurationsImage from '../images/Misconfigurations.png';
+
 <Header>
     <CustomHeader />
 </Header>
+
+### A6:2017 - Security Misconfiguration
+
+<img src={misconfigurationsImage} />
+
 
 ---
 
@@ -393,26 +400,23 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
     <CustomHeader />
 </Header>
 
+- Security misconfiguration is the most commonly seen issue
+- This is commonly a result of insecure default configurations, incomplete or ad hoc configurations, open cloud storage, misconfigured HTTP headers, and verbose error messages containing sensitive information
+- Missing appropriate security hardening across any part of the application stack
+- A repeatable hardening process that makes it fast and easy to deploy another environment that is properly locked down
 
 ---
+
+import xssImage from '../images/xss.jpg';
 
 <Header>
     <CustomHeader />
 </Header>
 
----
+## A7:2017 - Cross-Site Scripting (XSS)
 
+<img src={xssImage} />
 
-<Header>
-    <CustomHeader />
-</Header>
-
-
----
-
-<Header>
-    <CustomHeader />
-</Header>
 
 ---
 
@@ -421,18 +425,9 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
     <CustomHeader />
 </Header>
 
----
-
-<Header>
-    <CustomHeader />
-</Header>
-
----
-
-
-<Header>
-    <CustomHeader />
-</Header>
+- XSS flaws occur whenever an application includes untrusted data in a new web page without proper validation or escaping
+- XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions or redirect the user to malicious sites
+- XSS attacks include session stealing, account takeover, MFA bypass, malicious software downloads, key logging, ...
 
 ---
 
@@ -440,18 +435,12 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
     <CustomHeader />
 </Header>
 
----
+### XSS types
 
+- DOM XSS (Type 0): The entire tainted data flow from source to sink takes place in the browser. For example, the source could be the URL of the page and the sink is a method call that causes the execution of malicious data (e.g., document.write).
+- Stored XSS (Type I): The application or API stores unsanitized user input that is viewed at a later time by another user
+- Reflected XSS (Type II): user input is immediately returned by a web application in an error message, search result, or any other response without sanitization.
 
-<Header>
-    <CustomHeader />
-</Header>
-
----
-
-<Header>
-    <CustomHeader />
-</Header>
 
 ---
 
@@ -460,12 +449,104 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
     <CustomHeader />
 </Header>
 
+### Mitigation
+
+- Using frameworks that automatically escape XSS by design
+- Context-aware escaping of untrusted HTTP request data
+- Apply strict [Content-Securit-Policy - CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+- Use automated tools such as WAF (Web Application Firewall)
+
+---
+
+import insecureDeserializationImage from '../images/insecure_deserialization.jpg';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## A8:2017 - Insecure Deserialization
+
+<img width="50%" src={insecureDeserializationImage} />
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Insecure deserialization often leads to RCE - remote code execution
+- Prototype pollution and application logic modification
+- Data tampering attacks
+
 ---
 
 <Header>
     <CustomHeader />
 </Header>
 
+### Mitigation
+
+- Try not to accept serialized objects from untrusted sources
+- Enforcing strict type constraints during deserialization before object creation
+- Isolating and running code that deserializes in low privilege
+- Logging deserialization exceptions and failures
+- Implementing integrity checks on serialized objects
+
+---
+
+import componentsWithKnownVulnsImage from '../images/comp_known_vulns.png';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+#### A9:2017 - Using Components with Known Vulnerabilities
+
+<img width="60%" src={componentsWithKnownVulnsImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Components, such as libraries, frameworks, and other software modules, run with the same privileges as the application
+- Only obtain components from official sources over secure links
+- Upgrade periodically and perform automated sanity checks
+- Remove unused dependencies, unnecessary features, components, files, and documentation
+- Monitor for libraries and components that are unmaintained or do not create security patches for older versions
+
+---
+
+import logMoitoringImage from '../images/log-monitoring.png';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+#### A10:2017 - Insufficient Logging & Monitoring
+
+<img src={logMoitoringImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## What You Cannot See, You Cannot Fight
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Insufficient logging and monitoring, allows attackers to further attack systems, maintain persistence, and tamper, extract, or destroy data. 
+- Most breach studies show time to detect a breach is over 200 days, typically detected by external parties rather than internal processes or monitoring
+- It is the bedrock of nearly every major incident
+
 ---
 
 
@@ -473,12 +554,97 @@ import clientSideOnlyValidationImage from '../images/client_side_only_validation
     <CustomHeader />
 </Header>
 
+## Mitigation
+
+- Ensure all login, access control failures, and server-side input validation failures can be logged with sufficient user context to identify suspicious or malicious accounts
+- Use centralized log management solutions
+- Establish effective monitoring and alerting such that suspicious activities are detected and responded to in a timely fashion
+
 ---
 
 <Header>
     <CustomHeader />
 </Header>
 
+
+<center> it is far more cost effective to design the security in from the start </center>
+
+
+
+---
+
+import allInOneImage from '../images/all-in-one.jpg';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+<ReactImageMagnify  
+smallImage={{
+    src: allInOneImage,
+    alt: 'OWASP Top 10 all in one',
+    width: 300,
+    height: 775
+    }} 
+largeImage={{
+    src: allInOneImage,
+    width: 650,
+    height: 2600
+}}
+isHintEnabled={true}
+shouldHideHintAfterFirstActivation={false}
+enlargedImageContainerDimensions={{width: 650, height: 600}}
+/>
+
+
+---
+
+import CSRFImage from '../images/CSRF.png'
+
+<Header>
+    <CustomHeader />
+</Header>
+
+#### A8:2013 - Cross-Site Request Forgery (CSRF)
+
+<img src={CSRFImage} />
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application
+- Use X-CSRF token
+- Requiring the user to reauthenticate, or prove they are a user (e.g., via a CAPTCHA) can also protect against CSRF
+
+
+
+---
+
+import unvalidatedRedirectImage from '../images/unvalidated_redirects.jpeg';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+### A10: 2013 – Unvalidated Redirects and Forwards
+
+
+<img src={unvalidatedRedirectImage} />
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Web applications frequently redirect and forward users to other pages and websites, and use untrusted data to determine the destination pages. Without proper validation, attackers can redirect victims to phishing or malware sites, or use forwards to access unauthorized pages
+- Don’t involve user parameters in calculating the destinatio
+- Whitelist allowed domains
 
 ---
 
@@ -524,3 +690,9 @@ If you think you know-it-all about cybersecurity, this discipline was probably i
 - [I’m harvesting credit card numbers and passwords from your site. Here’s how](https://medium.com/hackernoon/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5)
 - [Part 2: How to stop me harvesting credit card numbers and passwords from your site](https://medium.com/hackernoon/part-2-how-to-stop-me-harvesting-credit-card-numbers-and-passwords-from-your-site-844f739659b9)
 - [A post-mortem of the malicious event-stream backdoor](https://snyk.io/blog/a-post-mortem-of-the-malicious-event-stream-backdoor/)
+
+
+
+---
+
+# Thank you 👋👋
