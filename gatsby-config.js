@@ -10,7 +10,13 @@ module.exports = {
   },
   pathPrefix: '/',
   plugins: [
-    'gatsby-plugin-catch-links',
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+          logo: "./src/favicon.png",
+      }
+    },
+      'gatsby-plugin-catch-links',
     {
       resolve: 'gatsby-theme-mdx-deck',
       options: {
@@ -19,5 +25,18 @@ module.exports = {
         basePath: '/',
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Security 101`,
+        short_name: `security101`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#000000`,
+        display: `standalone`,
+        icon: 'src/favicon.png'
+      }
+    },
+    `gatsby-plugin-offline`,
   ],
 }

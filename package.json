@@ -19,6 +19,8 @@
     "gatsby": "^2.26.1",
     "gatsby-plugin-catch-links": "^2.1.2",
     "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-plugin-manifest": "^2.6.1",
+    "gatsby-plugin-offline": "^3.4.0",
     "gatsby-theme-mdx-deck": "^4.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
