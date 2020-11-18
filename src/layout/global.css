@@ -1,0 +1,38 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-header {
+  font-size: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.contacts {
+  width: 11rem;
+  margin: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.github-corner svg {
+  z-index: 1;
+}
+
+
+/* .slide {
+
+} */
+
+/* .securityImage {
+  background-color: aliceblue;
+} */

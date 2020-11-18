@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "name": "@mdx-deck/gatsby-example",
+  "version": "4.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "gatsby develop",
+    "clean": "gatsby clean",
+    "build": "gatsby build --prefix-paths",
+    "serve": "gatsby serve --prefix-paths",
+    "gh-pages": "npx gh-pages -d public"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    "gatsby": "^2.26.1",
+    "gatsby-plugin-catch-links": "^2.1.2",
+    "gatsby-plugin-favicon": "^3.1.6",
+    "gatsby-theme-mdx-deck": "^4.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-github-corner": "^2.5.0",
+    "react-image-magnify": "^2.7.4"
+  }
+}

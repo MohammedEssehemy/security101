@@ -1,0 +1,460 @@
+import CustomHeader from '../layout/CustomHeader';
+import customTheme from '../layout/theme';
+export const theme = customTheme
+
+<Header>
+    <CustomHeader />
+</Header>
+
+# Security 101
+<center>Essehemy 👋</center>
+
+---
+<Header>
+    <CustomHeader />
+</Header>
+
+## Cyber Security 👨🏻‍💻
+
+
+<center> Process and preventative action of protecting computer systems
+            from malicious attacks or unauthorized access </center>
+
+
+---
+<Header>
+    <CustomHeader />
+</Header>
+
+
+#### Cyber-Security is much more than a matter of IT
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## Everything relies on computers
+
+- Communication 
+- Medicine 
+- Education
+- Military
+- Transportation
+- Shopping 
+- Entertainment
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+<h3>
+<center> It takes 20 years to build a reputation and few minutes of cyber-incident to ruin it </center>
+</h3>
+
+---
+
+import ReactImageMagnify from 'react-image-magnify';
+import securityImage from "../images/node.js_security_infographics.png";
+
+<Header>
+    <CustomHeader />
+</Header>
+
+How are we doing regarding security?🥴
+
+<ReactImageMagnify  
+smallImage={{
+    alt: 'Node.js security infographics',
+    isFluidWidth: false,
+    src: securityImage,
+    width: 300,
+    height: 700
+}} 
+largeImage={{
+    src: securityImage,
+    width: 550,
+    height: 2400
+}}
+isHintEnabled={true}
+shouldHideHintAfterFirstActivation={false}
+enlargedImageContainerDimensions={{width: 550, height: 500}}
+/>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## Elements
+
+- Information Security
+- Network Security
+- End User Education
+- Application Security
+
+---
+
+import informationSecurityImage from "../images/principles_of_information_security.jpg";
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## Principles of  Information Security (CIA)
+
+<Image width={'40%'} height={'80%'} src={informationSecurityImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## Network Security 
+
+- Use Virtual Private Network (VPN)
+- Apply Network Access Control (NAC)
+- Apply Firewall Rules
+- Watch out of MITM and spoofing
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## End User Education 🙆🏻‍♂️
+
+- Humans are the weakest link in a security system
+- Security policies, procedures and protocols must be applied
+- Be aware of Social Engineering
+- Take care of Phishing & Scams
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+<h3>
+<center> 👉🏻 You are the most important factor </center>
+</h3>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+import owaspImage from "../images/owasp.png";
+
+## Application Security
+
+<Image width={'60%'} height={'80%'} src={owaspImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## OWASP Top 10 🐞
+
+<center> The 10 most critical web application security risks, as identified and agreed upon, 
+    by security experts from around the world. </center>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+import riskImage from "../images/risk.png";
+
+## Risk? ⚠️
+
+<Image width={'80%'} height={'50%'} src={riskImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+import injectionImage from "../images/injection.jpg";
+
+## A1:2017 - Injection 
+
+<Image width={'80%'} height={'70%'} src={injectionImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization 
+- User-supplied data is not validated, filtered, or sanitized by the application 
+- Most common types are `SQL`, `NoSQL`
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+### Mitigation 💉
+
+- Use a safe API, which avoids the use of the interpreter entirely or provides a parameterized interface 
+- Use positive list (allowed values)
+- Escape special characters using context aware interpreter
+- Reduce dynamic queries
+- Code Review
+- [SAST](https://www.owasp.org/index.php/Source_Code_Analysis_Tools) and [DAST](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools)
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+import brokenAuthenticationImage from "../images/Broken_Authentication.png";
+
+## A2:2017 - Broken Authentication 🔓
+
+<Image width={'40%'} height={'80%'} src={brokenAuthenticationImage} />
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Authentication and session management are often implemented incorrectly, allowing attackers to take-over other users’ identities temporarily or permanently 
+- Uses weak or ineffective credential recovery and forgot-password processes  
+- Uses plain text, encrypted, or weakly hashed passwords 
+- Has missing or ineffective multi-factor authentication
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+### Mitigation 💉
+
+- Implement multi-factor authentication to prevent credential stuffing and brute force attacks
+- Change default credentials, particularly for admin users 
+- Implement weak-password checks 
+- Ensure rate limit and apply exponential backoff
+- User sessions or authentication tokens should be invalidated during logout or a period of inactivity
+
+---
+
+import sensitiveDataExposureImage from '../images/SensitiveDataExposure.jpg';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+
+## A3:2017 - Sensitive Data Exposure 🤐
+
+<Image width={'80%'} height={'40%'} src={sensitiveDataExposureImage} />
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+- Many web applications and APIs do not properly protect sensitive data, such as financial, healthcare, and PII. 
+- Personal Identifiable information (PII) data such as health records, creden- tials, personal data, and credit cards
+- Data transmitted in clear text? protocols such as HTTP, SMTP, and FTP (in transit)
+- Is sensitive data stored in clear text, including backups? (at rest)
+- are any user agent (browser) security directives or headers missing?
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+## Mitigation 💉
+
+- Classify data processed, stored, or transmitted by an application. 
+- Identify which data is sensitive according to privacy laws, regulatory requirements, or business needs
+- Don’t store sensitive data unnecessarily
+- Ensure up-to-date and strong standard algorithms and key management
+- Encrypt all data in transit with secure protocols such as TLS
+- Use [HSTS - HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
+- Disable caching for responses that contain sensitive data
+
+---
+
+import XXEImage from '../images/XML_External_Entities.png';
+
+<Header>
+    <CustomHeader />
+</Header>
+
+
+## A4:2017 - XML External Entities  
+
+<Image width={'80%'} height={'40%'} src={XXEImage} />
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+<h3>
+<center>
+If you think you know-it-all about cybersecurity, this discipline was probably ill-explained to you
+</center>
+<center>🤓</center>
+</h3>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+### References 📚
+
+- [OWASP TOP 10 - 2013 PDF](https://github.com/OWASP/Top10/blob/master/2013/OWASP%20Top%2010%20-%202013.pdf)
+- [OWASP TOP 10 - 2017](https://github.com/OWASP/Top10/blob/master/2017/OWASP%20Top%2010-2017%20(en).pdf)
+- [OWASP - Vulnerable Web Applications Directory](https://owasp.org/www-project-vulnerable-web-applications-directory/)
+- Vulnerable apps for Ninjas to exploit 🕵🏻‍♂️
+    - [Juice Shop](https://github.com/bkimminich/juice-shop)
+    - [Node Goat](https://github.com/OWASP/NodeGoat)
+- [Awesome nodejs security](https://github.com/lirantal/awesome-nodejs-security)
+- [Nodejs Security status infographic](https://i1.wp.com/blog.sqreen.com/wp-content/uploads/2017/11/node.js_security_infographics.png?w=1024)
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+continue
+
+- [OWASP Top 10 - 2017 Infographic](https://www.veracode.com/sites/default/files/owasp-top-10-update-2017-infographic.png)
+- [NodeJS security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
+- [CWE Top 25](https://cwe.mitre.org/data/definitions/1350.html)
