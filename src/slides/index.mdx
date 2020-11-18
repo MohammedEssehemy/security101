@@ -27,7 +27,7 @@ export const theme = customTheme
 </Header>
 
 
-#### Cyber-Security is much more than a matter of IT
+<center> Cyber-Security is much more than a matter of IT </center>
 
 ---
 
@@ -64,15 +64,15 @@ import securityImage from "../images/node.js_security_infographics.png";
     <CustomHeader />
 </Header>
 
-How are we doing regarding security?🥴
+##### How are we doing regarding security?🥴
 
 <ReactImageMagnify  
 smallImage={{
     src: securityImage,
     alt: 'Node.js security infographics',
     width: 300,
-    height: 700
-}} 
+    height: 675
+    }} 
 largeImage={{
     src: securityImage,
     width: 550,
@@ -106,7 +106,7 @@ import informationSecurityImage from "../images/principles_of_information_securi
 
 ## Principles of  Information Security (CIA)
 
-<Image width={'40%'} height={'80%'} src={informationSecurityImage} />
+<img src={informationSecurityImage} />
 
 ---
 
@@ -150,11 +150,20 @@ import informationSecurityImage from "../images/principles_of_information_securi
     <CustomHeader />
 </Header>
 
+<center> Security in IT is like locking your house or car, 
+    it doesn’t stop the bad guys, but if it’s good enough they may move on to an easier target </center>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
 import owaspImage from "../images/owasp.png";
 
 ## Application Security
 
-<Image width={'60%'} height={'80%'} src={owaspImage} />
+<img src={owaspImage} />
 
 ---
 
@@ -177,7 +186,7 @@ import riskImage from "../images/risk.png";
 
 ## Risk? ⚠️
 
-<Image width={'80%'} height={'50%'} src={riskImage} />
+<img src={riskImage} />
 
 ---
 
@@ -189,7 +198,7 @@ import injectionImage from "../images/injection.jpg";
 
 ## A1:2017 - Injection 
 
-<Image width={'80%'} height={'70%'} src={injectionImage} />
+<img src={injectionImage} />
 
 ---
 
@@ -226,7 +235,7 @@ import brokenAuthenticationImage from "../images/Broken_Authentication.png";
 
 ## A2:2017 - Broken Authentication 🔓
 
-<Image width={'40%'} height={'80%'} src={brokenAuthenticationImage} />
+<img src={brokenAuthenticationImage} />
 
 
 ---
@@ -265,7 +274,7 @@ import sensitiveDataExposureImage from '../images/SensitiveDataExposure.jpg';
 
 ## A3:2017 - Sensitive Data Exposure 🤐
 
-<Image width={'80%'} height={'40%'} src={sensitiveDataExposureImage} />
+<img width={'80%'} height={'40%'} src={sensitiveDataExposureImage} />
 
 ---
 
@@ -306,7 +315,7 @@ import XXEImage from '../images/XML_External_Entities.png';
 
 ## A4:2017 - XML External Entities  
 
-<Image width={'80%'} height={'40%'} src={XXEImage} />
+<img src={XXEImage} />
 
 
 ---
@@ -315,32 +324,21 @@ import XXEImage from '../images/XML_External_Entities.png';
     <CustomHeader />
 </Header>
 
-<center>
-Many older or poorly configured XML processors evaluate external entity references within XML documents. 
+- Many older or poorly configured XML processors evaluate external entity references within XML documents. 
 External entities can be used to disclose internal files using the file URI handler, internal file shares, internal port scanning, remote code execution, and denial of service attacks
-</center>
 
-<center>
-use less complex data formats such as JSON, and avoiding serialization of sensitive data
-</center>
+- use less complex data formats such as JSON, and avoiding serialization of sensitive data
 
 ---
+import accessControlImage from '../images/Access_Control.png';
 
 <Header>
     <CustomHeader />
 </Header>
 
----
+## A5:2017-Broken Access Control
 
-
----
-
-<Header>
-    <CustomHeader />
-</Header>
-
----
-
+<img src={accessControlImage} />
 
 
 ---
@@ -349,9 +347,8 @@ use less complex data formats such as JSON, and avoiding serialization of sensit
     <CustomHeader />
 </Header>
 
----
-
-
+- Restrictions on what authenticated users are allowed to do are often not properly enforced. (Authorization) 
+- Attackers can exploit these flaws to access unauthorized functionality and/or data, such as access other users' accounts, view sensitive files, modify other users’ data, change access rights, etc
 
 
 ---
@@ -363,6 +360,22 @@ use less complex data formats such as JSON, and avoiding serialization of sensit
 ---
 
 
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
 
 
 ---
@@ -374,25 +387,9 @@ use less complex data formats such as JSON, and avoiding serialization of sensit
 ---
 
 
-
----
-
 <Header>
     <CustomHeader />
 </Header>
-
----
-
-
-
----
-
-<Header>
-    <CustomHeader />
-</Header>
-
----
-
 
 
 ---
@@ -404,6 +401,9 @@ use less complex data formats such as JSON, and avoiding serialization of sensit
 ---
 
 
+<Header>
+    <CustomHeader />
+</Header>
 
 ---
 
@@ -413,6 +413,49 @@ use less complex data formats such as JSON, and avoiding serialization of sensit
 
 ---
 
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+<Header>
+    <CustomHeader />
+</Header>
+
+---
+
+
+<Header>
+    <CustomHeader />
+</Header>
 
 ---
 
@@ -457,7 +500,7 @@ If you think you know-it-all about cybersecurity, this discipline was probably i
     <CustomHeader />
 </Header>
 
-continue
+### continue
 
 - [OWASP Top 10 - 2017 Infographic](https://www.veracode.com/sites/default/files/owasp-top-10-update-2017-infographic.png)
 - [NodeJS security cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html)
